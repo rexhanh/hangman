@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-cY-dVC">
+                                <rect key="frame" x="44" y="448" width="326" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-d1-aEU">
+                                <rect key="frame" x="44" y="495" width="326" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-Ei-dR7">
+                                <rect key="frame" x="20" y="130" width="374" height="205"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sg-OQ-FiO">
+                                <rect key="frame" x="20" y="383" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bmo-d1-aEU" firstAttribute="leading" secondItem="Rej-cY-dVC" secondAttribute="leading" id="0Ig-vT-1uY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Sg-OQ-FiO" secondAttribute="trailing" constant="20" id="0mW-rU-rxj"/>
+                            <constraint firstItem="bmo-d1-aEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="2Xh-vN-Q5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9TY-Ei-dR7" secondAttribute="trailing" constant="20" id="6s3-Cd-kpm"/>
+                            <constraint firstItem="7Sg-OQ-FiO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="383" id="9JU-vU-oeF"/>
+                            <constraint firstItem="Rej-cY-dVC" firstAttribute="top" secondItem="7Sg-OQ-FiO" secondAttribute="bottom" constant="36" id="9OB-Tf-fbc"/>
+                            <constraint firstItem="bmo-d1-aEU" firstAttribute="top" secondItem="Rej-cY-dVC" secondAttribute="bottom" constant="26.5" id="BuW-gH-SLF"/>
+                            <constraint firstItem="9TY-Ei-dR7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lw5-80-k1v"/>
+                            <constraint firstItem="7Sg-OQ-FiO" firstAttribute="top" secondItem="9TY-Ei-dR7" secondAttribute="bottom" constant="48" id="N4u-jE-xCG"/>
+                            <constraint firstItem="9TY-Ei-dR7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="Q8V-cg-rF7"/>
+                            <constraint firstItem="7Sg-OQ-FiO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eGs-oJ-Lhd"/>
+                            <constraint firstItem="7Sg-OQ-FiO" firstAttribute="centerX" secondItem="Rej-cY-dVC" secondAttribute="centerX" id="k9x-lt-3sg"/>
+                            <constraint firstItem="7Sg-OQ-FiO" firstAttribute="centerX" secondItem="bmo-d1-aEU" secondAttribute="centerX" id="p46-3Q-hGD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="7Sg-OQ-FiO" id="QGx-QO-ggF"/>
+                        <outlet property="hangmanImage" destination="9TY-Ei-dR7" id="o4o-GD-lXm"/>
+                        <outlet property="timeGuessedLabel" destination="bmo-d1-aEU" id="miO-Kw-OYa"/>
+                        <outlet property="wordLabel" destination="Rej-cY-dVC" id="IRd-fP-Cit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
