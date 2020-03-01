@@ -61,9 +61,9 @@ class Hangman {
         let phrase = self.wwdcArray[randomInt]
         for s in phrase {
             if s != " " {
-                displayPhrase.append("_ ")
+                displayPhrase.append("_")
             } else {
-                displayPhrase.append("  ")
+                displayPhrase.append(" ")
             }
         }
         return [phrase, displayPhrase]
