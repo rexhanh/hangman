@@ -12,11 +12,13 @@ class HangmanViewController: UIViewController {
 
     // MARK: - Instances: Models
     var hangman = Hangman()
+    
     // MARK: - IBOutlets
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var timeGuessedLabel: UILabel!
     @IBOutlet weak var hangmanImage: UIImageView!
+    
     // MARK: - Class Props/Vars
     var timeGuessed = 0
     var characterGuesses = Set<String>()
@@ -24,6 +26,7 @@ class HangmanViewController: UIViewController {
     var displayLabelText = ""
     var wordLength = 0
     var lastGuessed = ""
+    
     // MARK: - IBActions
     @IBAction func buttonPressed(_ sender: UIButton) {
         switch sender.tag {
@@ -85,6 +88,8 @@ class HangmanViewController: UIViewController {
         
         playTurn()
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -138,9 +143,11 @@ class HangmanViewController: UIViewController {
         displayLabel.attributedText = NSAttributedString(string: displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
         self.wordLength = self.wordLabelText.count
     }
+    
     private func loadPhrase() {
          displayLabel.attributedText = NSAttributedString(string: displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
     }
+    
     private func loadGuessLabel() {
         timeGuessedLabel.text = "You have guessed wrong \(self.timeGuessed) time(s)"
     }
