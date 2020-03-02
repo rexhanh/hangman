@@ -9,6 +9,13 @@
 import Foundation
 
 class Hangman {
+    var timeGuessedWrong = 0
+    var characterGuesses = Set<String>()
+    var wordLabelText = ""
+    var displayLabelText = ""
+    var wordLength = 0
+    var lastGuessed = ""
+    var correctGuess = 0
     let wwdcArray:[String] = [
         "Good morning",
         "We have developers here",
@@ -68,5 +75,44 @@ class Hangman {
         }
         return [phrase, displayPhrase]
     }
+    func updateLabels(){
+        if !self.characterGuesses.contains(self.lastGuessed) {
+            self.characterGuesses.insert(self.lastGuessed)
+            var newStringToDisplay = ""
+
+            for i in 0..<self.wordLabelText.count {
+                let originalStrIndex = self.wordLabelText.index(self.wordLabelText.startIndex, offsetBy: i)
+                let dispStrIndex = self.displayLabelText.index(self.displayLabelText.startIndex, offsetBy: i)
+                let orgChar = self.wordLabelText[originalStrIndex]
+                let dispChar = self.displayLabelText[dispStrIndex]
+                if self.lastGuessed == String(orgChar).lowercased() {
+                    newStringToDisplay.append(orgChar)
+                    self.correctGuess += 1
+                    self.characterGuesses.insert(String(orgChar).lowercased())
+                } else {
+                    newStringToDisplay.append(dispChar)
+                }
+            }
+            
+            if !self.wordLabelText.lowercased().contains(self.lastGuessed) {
+                self.timeGuessedWrong += 1
+            }
+            self.displayLabelText = newStringToDisplay
+        }
+    }
+    func checkLoseStatus() -> Bool{
+        if self.timeGuessedWrong >= 6 {
+            return true
+        }
+        return false
+    }
+    
+    func checkWinStatus() -> Bool {
+        if self.correctGuess == self.wordLength {
+            return true
+        }
+        return false
+    }
+    
 }
 
