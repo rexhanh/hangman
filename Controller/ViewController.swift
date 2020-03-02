@@ -20,7 +20,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var hangmanImage: UIImageView!
     
     // MARK: - Class Props/Vars
-
+    
     // MARK: - IBActions
     @IBAction func buttonPressed(_ sender: UIButton) {
         switch sender.tag {

@@ -16,7 +16,7 @@ class Hangman {
     var wordLength = 0
     var lastGuessed = ""
     var correctGuess = 0
-    let wwdcArray:[String] = [
+    var wwdcArray:[String] = [
         "Good morning",
         "We have developers here",
         "June Fourth",
@@ -61,6 +61,12 @@ class Hangman {
         "iMac Pro"
     ]
     
+    init() {
+        if let URL = Bundle.main.url(forResource: "wordlist", withExtension: "plist") {
+            if let englishFromPlist = NSArray(contentsOf: URL) as? [String] {
+                self.wwdcArray = englishFromPlist
+            }}
+    }
     // MARK: - Your Code Here
     func randomPhrase() -> [String] {
         var displayPhrase: String = ""
