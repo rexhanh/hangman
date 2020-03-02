@@ -297,11 +297,55 @@
                         <outlet property="hangmanImage" destination="9TY-Ei-dR7" id="o4o-GD-lXm"/>
                         <outlet property="timeGuessedLabel" destination="bmo-d1-aEU" id="miO-Kw-OYa"/>
                         <outlet property="wordLabel" destination="Rej-cY-dVC" id="IRd-fP-Cit"/>
+                        <segue destination="gmY-bv-Ggn" kind="show" identifier="toEndGameSegue" id="i0U-ZK-EV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="Z9r-EI-som">
+            <objects>
+                <viewController id="gmY-bv-Ggn" customClass="EndGameViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eO6-8F-XKy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-6F-O4e">
+                                <rect key="frame" x="89" y="295" width="236" height="94"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qA-KF-ov6">
+                                <rect key="frame" x="161" y="425" width="92" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Restart"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9q8-6F-O4e" firstAttribute="top" secondItem="cNr-y9-ZF4" secondAttribute="top" constant="295" id="3cK-Sz-g8I"/>
+                            <constraint firstItem="9q8-6F-O4e" firstAttribute="centerX" secondItem="eO6-8F-XKy" secondAttribute="centerX" id="3zs-2C-742"/>
+                            <constraint firstItem="5qA-KF-ov6" firstAttribute="centerX" secondItem="eO6-8F-XKy" secondAttribute="centerX" id="8Us-L1-7Op"/>
+                            <constraint firstItem="5qA-KF-ov6" firstAttribute="leading" secondItem="cNr-y9-ZF4" secondAttribute="leading" constant="161" id="QQX-VL-7PK"/>
+                            <constraint firstItem="cNr-y9-ZF4" firstAttribute="bottom" secondItem="5qA-KF-ov6" secondAttribute="bottom" constant="335" id="StS-ZD-h1C"/>
+                            <constraint firstItem="9q8-6F-O4e" firstAttribute="leading" secondItem="cNr-y9-ZF4" secondAttribute="leading" constant="89" id="gIT-6e-KLS"/>
+                            <constraint firstItem="5qA-KF-ov6" firstAttribute="top" secondItem="9q8-6F-O4e" secondAttribute="bottom" constant="36" id="hsC-Lk-uB2"/>
+                            <constraint firstItem="5qA-KF-ov6" firstAttribute="centerY" secondItem="eO6-8F-XKy" secondAttribute="centerY" constant="28" id="wjj-rb-Tq6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cNr-y9-ZF4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R5M-cs-eG4"/>
+                    <connections>
+                        <outlet property="endGameLabel" destination="9q8-6F-O4e" id="gdN-0S-Pee"/>
+                        <outlet property="restartButton" destination="5qA-KF-ov6" id="rqi-3e-k4E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAa-5d-DhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>

@@ -79,11 +79,13 @@ class HangmanViewController: UIViewController {
         default:
             hangman.lastGuessed = ""
         }
-        if !hangman.checkLoseStatus() {
+        if !hangman.checkLoseStatus() && !hangman.checkWinStatus() {
             playTurn()
-        } else {
+        }
+        if hangman.checkWinStatus() || hangman.checkLoseStatus() {
             endGame()
         }
+        
     }
     
     override func viewDidLoad() {
@@ -95,21 +97,6 @@ class HangmanViewController: UIViewController {
     }
     
     // MARK: - Class Methods
-    
-    private func reset() -> Void { return }
-    
-    private func playTurn() -> Void {
-        updateLabels()
-        updateImage()
-        
-    }
-    
-    private func endGame() -> Void {
-        if hangman.checkWinStatus() {
-            //need to implement
-        }
-        
-    }
     
     private func updateLabels() {
         hangman.updateLabels()
@@ -123,7 +110,6 @@ class HangmanViewController: UIViewController {
         hangman.displayLabelText = randomPhraseArr[1]
         wordLabel.text = hangman.wordLabelText
         displayLabel.attributedText = NSAttributedString(string: hangman.displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
-        hangman.wordLength = hangman.wordLabelText.count
     }
 
     private func loadPhrase() {
@@ -142,8 +128,35 @@ class HangmanViewController: UIViewController {
         self.hangmanImage.image = UIImage(named: imageName)
     }
     
-    // Optional Example Code, but might be useful...
+     private func reset() -> Void { return }
+     
+     private func playTurn() -> Void {
+         updateLabels()
+         updateImage()
+     }
+     
+     private func endGame() -> Void {
+        let alert = UIAlertController(title: "Game Over!", message: "Continue restart the game!", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {action in self.performSegue(withIdentifier: "toEndGameSegue", sender: self)}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+     }
     
+    // Optional Example Code, but might be useful...
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if let destination = segue.destination as? EndGameViewController {
+                if identifier == "toEndGameSegue" {
+                    if self.hangman.checkLoseStatus() {
+                        destination.endGameString = "YOU LOSE!!!"
+                    }
+                    if self.hangman.checkWinStatus() {
+                        destination.endGameString = "YOU WIN!!!!!!"
+                    }
+                }
+            }
+        }
+    }
     
     /* PREPARING AND PRESENTING A SEGUE (TRANSITION)
      ... { _ in

@@ -69,6 +69,7 @@ class Hangman {
         for s in phrase {
             if s != " " {
                 displayPhrase.append("_")
+                self.wordLength += 1
             } else {
                 displayPhrase.append(" ")
             }
@@ -79,7 +80,6 @@ class Hangman {
         if !self.characterGuesses.contains(self.lastGuessed) {
             self.characterGuesses.insert(self.lastGuessed)
             var newStringToDisplay = ""
-
             for i in 0..<self.wordLabelText.count {
                 let originalStrIndex = self.wordLabelText.index(self.wordLabelText.startIndex, offsetBy: i)
                 let dispStrIndex = self.displayLabelText.index(self.displayLabelText.startIndex, offsetBy: i)
@@ -108,11 +108,16 @@ class Hangman {
     }
     
     func checkWinStatus() -> Bool {
-        if self.correctGuess == self.wordLength {
-            return true
+        var win = false
+        if !checkLoseStatus() {
+            for s in self.displayLabelText {
+                if s == "_" {
+                    return win
+                }
+            }
+            win = true
         }
-        return false
+        return win
     }
-    
 }
 

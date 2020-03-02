@@ -14,6 +14,8 @@
 		4248B99D23EF6DDE0022D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4248B99C23EF6DDE0022D0B1 /* Assets.xcassets */; };
 		4248B9A023EF6DDE0022D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4248B99E23EF6DDE0022D0B1 /* LaunchScreen.storyboard */; };
 		42AC74A323FF4C140041F2F0 /* Hangman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC74A223FF4C140041F2F0 /* Hangman.swift */; };
+		CD9ECADC240CEA2F00229D29 /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD9ECADB240CEA2F00229D29 /* wordlist.plist */; };
+		CD9ECADE240CF1B300229D29 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4248B99F23EF6DDE0022D0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4248B9A123EF6DDE0022D0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42AC74A223FF4C140041F2F0 /* Hangman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hangman.swift; sourceTree = "<group>"; };
+		CD9ECADB240CEA2F00229D29 /* wordlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = wordlist.plist; sourceTree = "<group>"; };
+		CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		4248B98723EF6DDC0022D0B1 = {
 			isa = PBXGroup;
 			children = (
+				CD9ECADB240CEA2F00229D29 /* wordlist.plist */,
 				4248B9A123EF6DDE0022D0B1 /* Info.plist */,
 				4248B9C523EF6E280022D0B1 /* Model */,
 				4248B9C623EF6E2D0022D0B1 /* View */,
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4248B99723EF6DDC0022D0B1 /* ViewController.swift */,
+				CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9ECADC240CEA2F00229D29 /* wordlist.plist in Resources */,
 				4248B9A023EF6DDE0022D0B1 /* LaunchScreen.storyboard in Resources */,
 				4248B99D23EF6DDE0022D0B1 /* Assets.xcassets in Resources */,
 				4248B99B23EF6DDC0022D0B1 /* Main.storyboard in Resources */,
@@ -167,6 +174,7 @@
 			files = (
 				4248B99823EF6DDC0022D0B1 /* ViewController.swift in Sources */,
 				4248B99423EF6DDC0022D0B1 /* AppDelegate.swift in Sources */,
+				CD9ECADE240CF1B300229D29 /* EndGameViewController.swift in Sources */,
 				42AC74A323FF4C140041F2F0 /* Hangman.swift in Sources */,
 				4248B99623EF6DDC0022D0B1 /* SceneDelegate.swift in Sources */,
 			);
