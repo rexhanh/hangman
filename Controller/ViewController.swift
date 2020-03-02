@@ -20,136 +20,126 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var hangmanImage: UIImageView!
     
     // MARK: - Class Props/Vars
-    var timeGuessed = 0
-    var characterGuesses = Set<String>()
-    var wordLabelText = ""
-    var displayLabelText = ""
-    var wordLength = 0
-    var lastGuessed = ""
-    
+
     // MARK: - IBActions
     @IBAction func buttonPressed(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            self.lastGuessed = "q"
+            hangman.lastGuessed = "q"
         case 1:
-            self.lastGuessed = "w"
+            hangman.lastGuessed = "w"
         case 2:
-            self.lastGuessed = "e"
+            hangman.lastGuessed = "e"
         case 3:
-            self.lastGuessed = "r"
+            hangman.lastGuessed = "r"
         case 4:
-            self.lastGuessed = "t"
+            hangman.lastGuessed = "t"
         case 5:
-            self.lastGuessed = "y"
+            hangman.lastGuessed = "y"
         case 6:
-            self.lastGuessed = "u"
+            hangman.lastGuessed = "u"
         case 7:
-            self.lastGuessed = "i"
+            hangman.lastGuessed = "i"
         case 8:
-            self.lastGuessed = "o"
+            hangman.lastGuessed = "o"
         case 9:
-            self.lastGuessed = "p"
+            hangman.lastGuessed = "p"
         case 10:
-            self.lastGuessed = "a"
+            hangman.lastGuessed = "a"
         case 11:
-            self.lastGuessed = "s"
+            hangman.lastGuessed = "s"
         case 12:
-            self.lastGuessed = "d"
+            hangman.lastGuessed = "d"
         case 13:
-            self.lastGuessed = "f"
+            hangman.lastGuessed = "f"
         case 14:
-            self.lastGuessed = "g"
+            hangman.lastGuessed = "g"
         case 15:
-            self.lastGuessed = "h"
+            hangman.lastGuessed = "h"
         case 16:
-            self.lastGuessed = "j"
+            hangman.lastGuessed = "j"
         case 17:
-            self.lastGuessed = "k"
+            hangman.lastGuessed = "k"
         case 18:
-            self.lastGuessed = "l"
+            hangman.lastGuessed = "l"
         case 19:
-            self.lastGuessed = "z"
+            hangman.lastGuessed = "z"
         case 20:
-            self.lastGuessed = "x"
+            hangman.lastGuessed = "x"
         case 21:
-            self.lastGuessed = "c"
+            hangman.lastGuessed = "c"
         case 22:
-            self.lastGuessed = "v"
+            hangman.lastGuessed = "v"
         case 23:
-            self.lastGuessed = "b"
+            hangman.lastGuessed = "b"
         case 24:
-            self.lastGuessed = "n"
+            hangman.lastGuessed = "n"
         case 25:
-            self.lastGuessed = "m"
+            hangman.lastGuessed = "m"
         default:
-            self.lastGuessed = ""
+            hangman.lastGuessed = ""
         }
-        
-        playTurn()
+        if !hangman.checkLoseStatus() {
+            playTurn()
+        } else {
+            endGame()
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         firstLoadPhrase()
         loadGuessLabel()
-        hangmanImage.image = UIImage(named: "hangman\(self.timeGuessed + 1)")
+        hangmanImage.image = UIImage(named: "hangman\(hangman.timeGuessedWrong + 1)")
     }
     
     // MARK: - Class Methods
     
     private func reset() -> Void { return }
+    
     private func playTurn() -> Void {
         updateLabels()
-        return }
-    private func endGame() -> Void { return }
-    
-    private func updateLabels() {
-        if !self.characterGuesses.contains(self.lastGuessed) {
-            self.characterGuesses.insert(self.lastGuessed)
-            var newStringToDisplay = ""
-
-            for i in 0..<self.wordLabelText.count {
-                let originalStrIndex = self.wordLabelText.index(self.wordLabelText.startIndex, offsetBy: i)
-                let dispStrIndex = self.displayLabelText.index(self.displayLabelText.startIndex, offsetBy: i)
-                let orgChar = self.wordLabelText[originalStrIndex]
-                let dispChar = self.displayLabelText[dispStrIndex]
-                if self.lastGuessed == String(orgChar).lowercased() {
-                    newStringToDisplay.append(orgChar)
-                    self.characterGuesses.insert(String(orgChar).lowercased())
-                } else {
-                    newStringToDisplay.append(dispChar)
-                }
-            }
-            
-            if !self.wordLabelText.lowercased().contains(self.lastGuessed) {
-                self.timeGuessed += 1
-            }
-            print(self.characterGuesses)
-            self.displayLabelText = newStringToDisplay
-            loadPhrase()
-            loadGuessLabel()
-        }
+        updateImage()
+        
     }
     
+    private func endGame() -> Void {
+        if hangman.checkWinStatus() {
+            //need to implement
+        }
+        
+    }
+    
+    private func updateLabels() {
+        hangman.updateLabels()
+        loadPhrase()
+        loadGuessLabel()
+    }
     
     private func firstLoadPhrase() {
         let randomPhraseArr = hangman.randomPhrase()
-        self.wordLabelText = randomPhraseArr[0]
-        self.displayLabelText = randomPhraseArr[1]
-        wordLabel.text = self.wordLabelText
-        displayLabel.attributedText = NSAttributedString(string: displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
-        self.wordLength = self.wordLabelText.count
+        hangman.wordLabelText = randomPhraseArr[0]
+        hangman.displayLabelText = randomPhraseArr[1]
+        wordLabel.text = hangman.wordLabelText
+        displayLabel.attributedText = NSAttributedString(string: hangman.displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
+        hangman.wordLength = hangman.wordLabelText.count
     }
-    
+
     private func loadPhrase() {
-         displayLabel.attributedText = NSAttributedString(string: displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
+        displayLabel.attributedText = NSAttributedString(string: hangman.displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
     }
     
+
     private func loadGuessLabel() {
-        timeGuessedLabel.text = "You have guessed wrong \(self.timeGuessed) time(s)"
+        timeGuessedLabel.text = "You have guessed wrong \(hangman.timeGuessedWrong) time(s)"
+    }
+    /*
+        Update the Image
+     */
+    private func updateImage() {
+        let imageName = "hangman\(hangman.timeGuessedWrong + 1)"
+        self.hangmanImage.image = UIImage(named: imageName)
     }
     
     // Optional Example Code, but might be useful...
