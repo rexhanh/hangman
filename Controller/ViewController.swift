@@ -118,7 +118,12 @@ class HangmanViewController: UIViewController {
     
 
     private func loadGuessLabel() {
-        timeGuessedLabel.text = "You have guessed wrong \(hangman.timeGuessedWrong) time(s)"
+        var guessesChar = ""
+        for s in hangman.characterGuesses.sorted() {
+            guessesChar.append(s)
+            guessesChar.append(" ")
+        }
+        timeGuessedLabel.text = "You have guessed wrong \(hangman.timeGuessedWrong) time(s)\n\nYour last guess is: \(hangman.lastGuessed)\n\nYou have guessed: \(guessesChar)"
     }
     /*
         Update the Image
