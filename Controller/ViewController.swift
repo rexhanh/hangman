@@ -15,7 +15,7 @@ class HangmanViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var displayLabel: UILabel!
-    @IBOutlet weak var wordLabel: UILabel!
+//    @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var timeGuessedLabel: UILabel!
     @IBOutlet weak var hangmanImage: UIImageView!
     
@@ -99,6 +99,7 @@ class HangmanViewController: UIViewController {
         firstLoadPhrase()
         loadGuessLabel()
         hangmanImage.image = UIImage(named: "hangman\(hangman.timeGuessedWrong + 1)")
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
     }
     
     // MARK: - Class Methods
@@ -110,7 +111,9 @@ class HangmanViewController: UIViewController {
     }
     
     private func firstLoadPhrase() {
-        wordLabel.text = hangman.wordLabelText
+//        wordLabel.text = hangman.wordLabelText
+        displayLabel.textColor = .white
+        displayLabel.font = displayLabel.font.withSize(30.0)
         displayLabel.attributedText = NSAttributedString(string: hangman.displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
     }
 
@@ -125,6 +128,8 @@ class HangmanViewController: UIViewController {
             guessesChar.append(s)
             guessesChar.append(" ")
         }
+        timeGuessedLabel.font = timeGuessedLabel.font.withSize(20.0)
+        timeGuessedLabel.textColor = .white
         timeGuessedLabel.text = "You have guessed wrong \(hangman.timeGuessedWrong) time(s)\n\nYour last guess is: \(hangman.lastGuessed)\n\nYou have guessed: \(guessesChar)"
     }
     /*
@@ -138,7 +143,6 @@ class HangmanViewController: UIViewController {
      private func reset() -> Void {
         self.hangman = Hangman(2)
         viewDidLoad()
-        
     }
      
      private func playTurn() -> Void {
@@ -158,13 +162,13 @@ class HangmanViewController: UIViewController {
         if let identifier = segue.identifier {
             if let destination = segue.destination as? EndGameViewController {
                 if identifier == "toEndGameSegue" {
+                    destination.hangman = self.hangman
                     if self.hangman.checkLoseStatus() {
-                        destination.endGameString = "YOU LOSE!!!"
+                        destination.endGameString = "Bronze leage hero?!\n\(String(repeating: "🧂", count: self.hangman.timeGuessedWrong))"
                     }
                     if self.hangman.checkWinStatus() {
-                        destination.endGameString = "YOU WIN!!!!!!"
+                        destination.endGameString = "Are you a Grand Master player?!\nYou only guessed wrong \(self.hangman.timeGuessedWrong) time(s)!"
                     }
-                    destination.hangman = self.hangman
                 }
             }
         }

@@ -2,13 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Zelot</key>
+	<key>Carrier has arrived</key>
+	<string>Carrier_Ready00</string>
+	<key>From the shadows I come</key>
+	<string>DarkTemplar_Ready00</string>
+	<key>Khassar de Templari</key>
+	<string>HighTemplar_Ready00</string>
+	<key>My Life For Aiur</key>
 	<string>Zealot_Ready00</string>
-	<key>Starcraft</key>
-	<string>Zealot_Ready00</string>
-	<key>Probe</key>
+	<key>Pylon</key>
 	<string>Alert_ProtossNeedMoreFood</string>
-	<key>SCV</key>
+	<key>SCV Ready</key>
 	<string>SCV_Ready00</string>
+	<key>The merging is complete</key>
+	<string>Archon_Ready00</string>
+	<key>I return to serve</key>
+	<string>Immortal_Ready00</string>
+	<key>Justice has come</key>
+	<string>Mothership_Ready00</string>
+	<key>Teleport successful</key>
+	<string>Phoenix_Ready00</string>
+	<key>I am here in the shadows</key>
+	<string>Stalker_Ready00</string>
+	<key>Prismatic core online</key>
+	<string>VoidRay_Ready00</string>
+	<key>Engines screaming</key>
+	<string>Banshee_Ready00</string>
+	<key>Who called in the fleet</key>
+	<string>Battlecruiser_Ready00</string>
+	<key>Ghost reporting</key>
+	<string>Ghost_Ready00</string>
+	<key>Ready to raise some hell</key>
+	<string>Hellion_Ready00</string>
+	<key>KABOOM baby</key>
+	<string>Marauder_Ready00</string>
+	<key>You want a piece of me boy</key>
+	<string>Marine_Ready00</string>
+	<key>Ready for dust off</key>
+	<string>Medivac_Ready00</string>
+	<key>Raven online</key>
+	<string>Raven_Ready00</string>
+	<key>Fueled up ready to go</key>
+	<string>SiegeTank_Ready00</string>
+	<key>Ready to roll out</key>
+	<string>SiegeTank_Ready01</string>
+	<key>Thor is here</key>
+	<string>Thor_Ready00</string>
+	<key>Ready to plunder</key>
+	<string>Viking_Ready00</string>
 </dict>
 </plist>

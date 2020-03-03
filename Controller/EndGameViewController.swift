@@ -11,7 +11,6 @@ import UIKit
 class EndGameViewController: UIViewController {
 
     // MARK: IBOutlet
-    @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var endGameLabel: UILabel!
     
     // MARK: Class var
@@ -23,6 +22,8 @@ class EndGameViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.hangman.playsound()
     }
+    
+    
 
     /*
     // MARK: - Navigation

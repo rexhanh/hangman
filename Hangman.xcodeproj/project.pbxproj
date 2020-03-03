@@ -17,6 +17,27 @@
 		51A03485240D9C9300D48E57 /* Zealot_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A03484240D9C9300D48E57 /* Zealot_Ready00.mp3 */; };
 		51A03488240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A03486240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 */; };
 		51A03489240E03FD00D48E57 /* SCV_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A03487240E03FD00D48E57 /* SCV_Ready00.mp3 */; };
+		CD75D0B7240E37FF0070CB74 /* Carrier_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0B5240E37FE0070CB74 /* Carrier_Ready00.mp3 */; };
+		CD75D0B8240E37FF0070CB74 /* Archon_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0B6240E37FF0070CB74 /* Archon_Ready00.mp3 */; };
+		CD75D0BF240E38140070CB74 /* Mothership_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0B9240E38130070CB74 /* Mothership_Ready00.mp3 */; };
+		CD75D0C0240E38140070CB74 /* Phoenix_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0BA240E38130070CB74 /* Phoenix_Ready00.mp3 */; };
+		CD75D0C1240E38140070CB74 /* Immortal_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0BB240E38140070CB74 /* Immortal_Ready00.mp3 */; };
+		CD75D0C2240E38140070CB74 /* HighTemplar_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0BC240E38140070CB74 /* HighTemplar_Ready00.mp3 */; };
+		CD75D0C3240E38140070CB74 /* Stalker_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0BD240E38140070CB74 /* Stalker_Ready00.mp3 */; };
+		CD75D0C4240E38140070CB74 /* DarkTemplar_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0BE240E38140070CB74 /* DarkTemplar_Ready00.mp3 */; };
+		CD75D0D2240E423C0070CB74 /* VoidRay_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0C5240E423A0070CB74 /* VoidRay_Ready00.mp3 */; };
+		CD75D0D3240E423C0070CB74 /* Marauder_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0C6240E423A0070CB74 /* Marauder_Ready00.mp3 */; };
+		CD75D0D4240E423C0070CB74 /* Marine_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0C7240E423A0070CB74 /* Marine_Ready00.mp3 */; };
+		CD75D0D5240E423C0070CB74 /* Thor_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0C8240E423A0070CB74 /* Thor_Ready00.mp3 */; };
+		CD75D0D6240E423C0070CB74 /* Ghost_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0C9240E423A0070CB74 /* Ghost_Ready00.mp3 */; };
+		CD75D0D7240E423C0070CB74 /* SiegeTank_Ready01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0CA240E423A0070CB74 /* SiegeTank_Ready01.mp3 */; };
+		CD75D0D8240E423C0070CB74 /* Banshee_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0CB240E423A0070CB74 /* Banshee_Ready00.mp3 */; };
+		CD75D0D9240E423C0070CB74 /* Viking_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0CC240E423B0070CB74 /* Viking_Ready00.mp3 */; };
+		CD75D0DA240E423C0070CB74 /* SiegeTank_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0CD240E423B0070CB74 /* SiegeTank_Ready00.mp3 */; };
+		CD75D0DB240E423C0070CB74 /* Medivac_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0CE240E423B0070CB74 /* Medivac_Ready00.mp3 */; };
+		CD75D0DC240E423C0070CB74 /* Hellion_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0CF240E423B0070CB74 /* Hellion_Ready00.mp3 */; };
+		CD75D0DD240E423C0070CB74 /* Battlecruiser_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0D0240E423B0070CB74 /* Battlecruiser_Ready00.mp3 */; };
+		CD75D0DE240E423C0070CB74 /* Raven_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD75D0D1240E423C0070CB74 /* Raven_Ready00.mp3 */; };
 		CD9ECADC240CEA2F00229D29 /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD9ECADB240CEA2F00229D29 /* wordlist.plist */; };
 		CD9ECADE240CF1B300229D29 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +55,27 @@
 		51A03484240D9C9300D48E57 /* Zealot_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zealot_Ready00.mp3; sourceTree = "<group>"; };
 		51A03486240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alert_ProtossNeedMoreFood.mp3; sourceTree = "<group>"; };
 		51A03487240E03FD00D48E57 /* SCV_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SCV_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0B5240E37FE0070CB74 /* Carrier_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Carrier_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0B6240E37FF0070CB74 /* Archon_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Archon_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0B9240E38130070CB74 /* Mothership_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mothership_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0BA240E38130070CB74 /* Phoenix_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Phoenix_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0BB240E38140070CB74 /* Immortal_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Immortal_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0BC240E38140070CB74 /* HighTemplar_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HighTemplar_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0BD240E38140070CB74 /* Stalker_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stalker_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0BE240E38140070CB74 /* DarkTemplar_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DarkTemplar_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0C5240E423A0070CB74 /* VoidRay_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VoidRay_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0C6240E423A0070CB74 /* Marauder_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marauder_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0C7240E423A0070CB74 /* Marine_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marine_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0C8240E423A0070CB74 /* Thor_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Thor_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0C9240E423A0070CB74 /* Ghost_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ghost_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0CA240E423A0070CB74 /* SiegeTank_Ready01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SiegeTank_Ready01.mp3; sourceTree = "<group>"; };
+		CD75D0CB240E423A0070CB74 /* Banshee_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Banshee_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0CC240E423B0070CB74 /* Viking_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Viking_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0CD240E423B0070CB74 /* SiegeTank_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SiegeTank_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0CE240E423B0070CB74 /* Medivac_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Medivac_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0CF240E423B0070CB74 /* Hellion_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hellion_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0D0240E423B0070CB74 /* Battlecruiser_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Battlecruiser_Ready00.mp3; sourceTree = "<group>"; };
+		CD75D0D1240E423C0070CB74 /* Raven_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Raven_Ready00.mp3; sourceTree = "<group>"; };
 		CD9ECADB240CEA2F00229D29 /* wordlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = wordlist.plist; sourceTree = "<group>"; };
 		CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +152,27 @@
 		51A03483240D9C2700D48E57 /* Sound effects */ = {
 			isa = PBXGroup;
 			children = (
+				CD75D0CB240E423A0070CB74 /* Banshee_Ready00.mp3 */,
+				CD75D0D0240E423B0070CB74 /* Battlecruiser_Ready00.mp3 */,
+				CD75D0C9240E423A0070CB74 /* Ghost_Ready00.mp3 */,
+				CD75D0CF240E423B0070CB74 /* Hellion_Ready00.mp3 */,
+				CD75D0C6240E423A0070CB74 /* Marauder_Ready00.mp3 */,
+				CD75D0C7240E423A0070CB74 /* Marine_Ready00.mp3 */,
+				CD75D0CE240E423B0070CB74 /* Medivac_Ready00.mp3 */,
+				CD75D0D1240E423C0070CB74 /* Raven_Ready00.mp3 */,
+				CD75D0CD240E423B0070CB74 /* SiegeTank_Ready00.mp3 */,
+				CD75D0CA240E423A0070CB74 /* SiegeTank_Ready01.mp3 */,
+				CD75D0C8240E423A0070CB74 /* Thor_Ready00.mp3 */,
+				CD75D0CC240E423B0070CB74 /* Viking_Ready00.mp3 */,
+				CD75D0C5240E423A0070CB74 /* VoidRay_Ready00.mp3 */,
+				CD75D0BE240E38140070CB74 /* DarkTemplar_Ready00.mp3 */,
+				CD75D0BC240E38140070CB74 /* HighTemplar_Ready00.mp3 */,
+				CD75D0BB240E38140070CB74 /* Immortal_Ready00.mp3 */,
+				CD75D0B9240E38130070CB74 /* Mothership_Ready00.mp3 */,
+				CD75D0BA240E38130070CB74 /* Phoenix_Ready00.mp3 */,
+				CD75D0BD240E38140070CB74 /* Stalker_Ready00.mp3 */,
+				CD75D0B6240E37FF0070CB74 /* Archon_Ready00.mp3 */,
+				CD75D0B5240E37FE0070CB74 /* Carrier_Ready00.mp3 */,
 				51A03486240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 */,
 				51A03487240E03FD00D48E57 /* SCV_Ready00.mp3 */,
 				51A03484240D9C9300D48E57 /* Zealot_Ready00.mp3 */,
@@ -175,13 +238,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD75D0D3240E423C0070CB74 /* Marauder_Ready00.mp3 in Resources */,
 				CD9ECADC240CEA2F00229D29 /* wordlist.plist in Resources */,
+				CD75D0BF240E38140070CB74 /* Mothership_Ready00.mp3 in Resources */,
 				4248B9A023EF6DDE0022D0B1 /* LaunchScreen.storyboard in Resources */,
+				CD75D0D2240E423C0070CB74 /* VoidRay_Ready00.mp3 in Resources */,
 				51A03489240E03FD00D48E57 /* SCV_Ready00.mp3 in Resources */,
+				CD75D0DC240E423C0070CB74 /* Hellion_Ready00.mp3 in Resources */,
 				4248B99D23EF6DDE0022D0B1 /* Assets.xcassets in Resources */,
 				51A03488240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 in Resources */,
+				CD75D0D6240E423C0070CB74 /* Ghost_Ready00.mp3 in Resources */,
+				CD75D0DD240E423C0070CB74 /* Battlecruiser_Ready00.mp3 in Resources */,
+				CD75D0D4240E423C0070CB74 /* Marine_Ready00.mp3 in Resources */,
+				CD75D0B8240E37FF0070CB74 /* Archon_Ready00.mp3 in Resources */,
+				CD75D0D8240E423C0070CB74 /* Banshee_Ready00.mp3 in Resources */,
+				CD75D0C1240E38140070CB74 /* Immortal_Ready00.mp3 in Resources */,
+				CD75D0B7240E37FF0070CB74 /* Carrier_Ready00.mp3 in Resources */,
 				4248B99B23EF6DDC0022D0B1 /* Main.storyboard in Resources */,
+				CD75D0D9240E423C0070CB74 /* Viking_Ready00.mp3 in Resources */,
+				CD75D0C0240E38140070CB74 /* Phoenix_Ready00.mp3 in Resources */,
+				CD75D0D7240E423C0070CB74 /* SiegeTank_Ready01.mp3 in Resources */,
+				CD75D0DA240E423C0070CB74 /* SiegeTank_Ready00.mp3 in Resources */,
+				CD75D0C3240E38140070CB74 /* Stalker_Ready00.mp3 in Resources */,
 				51A03485240D9C9300D48E57 /* Zealot_Ready00.mp3 in Resources */,
+				CD75D0D5240E423C0070CB74 /* Thor_Ready00.mp3 in Resources */,
+				CD75D0C4240E38140070CB74 /* DarkTemplar_Ready00.mp3 in Resources */,
+				CD75D0C2240E38140070CB74 /* HighTemplar_Ready00.mp3 in Resources */,
+				CD75D0DB240E423C0070CB74 /* Medivac_Ready00.mp3 in Resources */,
+				CD75D0DE240E423C0070CB74 /* Raven_Ready00.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
