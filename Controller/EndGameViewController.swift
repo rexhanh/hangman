@@ -15,14 +15,14 @@ class EndGameViewController: UIViewController {
     @IBOutlet weak var endGameLabel: UILabel!
     
     // MARK: Class var
-    
+    var hangman = Hangman(2)
     var endGameString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         endGameLabel.text = endGameString
         // Do any additional setup after loading the view.
+        self.hangman.playsound()
     }
-    
 
     /*
     // MARK: - Navigation

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
-	<string>Starcraft</string>
-	<string>Probe</string>
-</array>
+<dict>
+	<key>Zelot</key>
+	<string>Zealot_Ready00</string>
+	<key>Starcraft</key>
+	<string>Zealot_Ready00</string>
+	<key>Probe</key>
+	<string>Alert_ProtossNeedMoreFood</string>
+	<key>SCV</key>
+	<string>SCV_Ready00</string>
+</dict>
 </plist>

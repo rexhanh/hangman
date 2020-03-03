@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Hangman {
+    var player: AVAudioPlayer?
     var timeGuessedWrong = 0
     var characterGuesses = Set<String>()
     var wordLabelText = ""
@@ -16,6 +18,7 @@ class Hangman {
     var wordLength = 0
     var lastGuessed = ""
     var correctGuess = 0
+    var wordDic: [String:String] = [:]
     var wwdcArray:[String] = [
         "Good morning",
         "We have developers here",
@@ -61,11 +64,20 @@ class Hangman {
         "iMac Pro"
     ]
     
-    init() {
-        if let URL = Bundle.main.url(forResource: "wordlist", withExtension: "plist") {
-            if let englishFromPlist = NSArray(contentsOf: URL) as? [String] {
-                self.wwdcArray = englishFromPlist
-            }}
+    init(_ debugmode: Int) {
+        if debugmode == 1{
+            self.wwdcArray = ["Zealot"]
+        } else {
+            if let URL = Bundle.main.url(forResource: "wordlist", withExtension: "plist") {
+                if let englishFromPlist = NSDictionary(contentsOf: URL) as? [String:String] {
+                    self.wordDic = englishFromPlist
+                }}
+            self.wwdcArray = Array(self.wordDic.keys.map{$0})
+        }
+            let randPhrase = randomPhrase()
+            self.wordLabelText = randPhrase[0]
+            self.displayLabelText = randPhrase[1]
+        
     }
     // MARK: - Your Code Here
     func randomPhrase() -> [String] {
@@ -124,6 +136,19 @@ class Hangman {
             win = true
         }
         return win
+    }
+    
+    func playsound() {
+        let url = Bundle.main.url(forResource: self.wordDic[self.wordLabelText], withExtension: "mp3")!
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            player.prepareToPlay()
+            player.play()
+
+        } catch let error as NSError {
+            print(error.description)
+        }
     }
 }
 

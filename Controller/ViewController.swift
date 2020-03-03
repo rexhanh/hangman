@@ -11,7 +11,7 @@ import UIKit
 class HangmanViewController: UIViewController {
 
     // MARK: - Instances: Models
-    var hangman = Hangman()
+    var hangman = Hangman(2)
     
     // MARK: - IBOutlets
     @IBOutlet weak var displayLabel: UILabel!
@@ -83,6 +83,7 @@ class HangmanViewController: UIViewController {
             playTurn()
         }
         if hangman.checkWinStatus() || hangman.checkLoseStatus() {
+//            hangman.playsound()
             endGame()
         }
         
@@ -105,9 +106,6 @@ class HangmanViewController: UIViewController {
     }
     
     private func firstLoadPhrase() {
-        let randomPhraseArr = hangman.randomPhrase()
-        hangman.wordLabelText = randomPhraseArr[0]
-        hangman.displayLabelText = randomPhraseArr[1]
         wordLabel.text = hangman.wordLabelText
         displayLabel.attributedText = NSAttributedString(string: hangman.displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
     }
@@ -158,6 +156,7 @@ class HangmanViewController: UIViewController {
                     if self.hangman.checkWinStatus() {
                         destination.endGameString = "YOU WIN!!!!!!"
                     }
+                    destination.hangman = self.hangman
                 }
             }
         }

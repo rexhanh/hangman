@@ -14,6 +14,9 @@
 		4248B99D23EF6DDE0022D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4248B99C23EF6DDE0022D0B1 /* Assets.xcassets */; };
 		4248B9A023EF6DDE0022D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4248B99E23EF6DDE0022D0B1 /* LaunchScreen.storyboard */; };
 		42AC74A323FF4C140041F2F0 /* Hangman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC74A223FF4C140041F2F0 /* Hangman.swift */; };
+		51A03485240D9C9300D48E57 /* Zealot_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A03484240D9C9300D48E57 /* Zealot_Ready00.mp3 */; };
+		51A03488240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A03486240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 */; };
+		51A03489240E03FD00D48E57 /* SCV_Ready00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A03487240E03FD00D48E57 /* SCV_Ready00.mp3 */; };
 		CD9ECADC240CEA2F00229D29 /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD9ECADB240CEA2F00229D29 /* wordlist.plist */; };
 		CD9ECADE240CF1B300229D29 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,9 @@
 		4248B99F23EF6DDE0022D0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4248B9A123EF6DDE0022D0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42AC74A223FF4C140041F2F0 /* Hangman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hangman.swift; sourceTree = "<group>"; };
+		51A03484240D9C9300D48E57 /* Zealot_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zealot_Ready00.mp3; sourceTree = "<group>"; };
+		51A03486240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alert_ProtossNeedMoreFood.mp3; sourceTree = "<group>"; };
+		51A03487240E03FD00D48E57 /* SCV_Ready00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SCV_Ready00.mp3; sourceTree = "<group>"; };
 		CD9ECADB240CEA2F00229D29 /* wordlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = wordlist.plist; sourceTree = "<group>"; };
 		CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +52,7 @@
 		4248B98723EF6DDC0022D0B1 = {
 			isa = PBXGroup;
 			children = (
+				51A03483240D9C2700D48E57 /* Sound effects */,
 				CD9ECADB240CEA2F00229D29 /* wordlist.plist */,
 				4248B9A123EF6DDE0022D0B1 /* Info.plist */,
 				4248B9C523EF6E280022D0B1 /* Model */,
@@ -98,6 +105,16 @@
 				CD9ECADD240CF1B300229D29 /* EndGameViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		51A03483240D9C2700D48E57 /* Sound effects */ = {
+			isa = PBXGroup;
+			children = (
+				51A03486240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 */,
+				51A03487240E03FD00D48E57 /* SCV_Ready00.mp3 */,
+				51A03484240D9C9300D48E57 /* Zealot_Ready00.mp3 */,
+			);
+			path = "Sound effects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +177,11 @@
 			files = (
 				CD9ECADC240CEA2F00229D29 /* wordlist.plist in Resources */,
 				4248B9A023EF6DDE0022D0B1 /* LaunchScreen.storyboard in Resources */,
+				51A03489240E03FD00D48E57 /* SCV_Ready00.mp3 in Resources */,
 				4248B99D23EF6DDE0022D0B1 /* Assets.xcassets in Resources */,
+				51A03488240E03FD00D48E57 /* Alert_ProtossNeedMoreFood.mp3 in Resources */,
 				4248B99B23EF6DDC0022D0B1 /* Main.storyboard in Resources */,
+				51A03485240D9C9300D48E57 /* Zealot_Ready00.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
