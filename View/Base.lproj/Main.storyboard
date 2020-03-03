@@ -165,7 +165,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-SR-fcG">
-                                                <rect key="frame" x="227.66666666666666" y="0.0" width="29.999999999999972" height="48"/>
+                                                <rect key="frame" x="227.66666666666663" y="0.0" width="29.999999999999972" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="h"/>
                                                 <connections>
@@ -270,9 +270,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlf-6i-nO9">
-                                <rect key="frame" x="346" y="44" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlf-6i-nO9">
+                                <rect key="frame" x="344" y="44" width="50" height="30"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
                                     <action selector="restartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTg-gy-fwe"/>
@@ -282,6 +281,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bmo-d1-aEU" firstAttribute="top" secondItem="Rej-cY-dVC" secondAttribute="bottom" constant="30.666666666666686" id="0gh-1T-JQJ"/>
+                            <constraint firstItem="nlf-6i-nO9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="7tQ-ch-jhc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5A9-FA-QF5" secondAttribute="trailing" constant="10" id="AoK-sb-lq8"/>
                             <constraint firstItem="Rej-cY-dVC" firstAttribute="top" secondItem="7Sg-OQ-FiO" secondAttribute="bottom" constant="19.333333333333314" id="JeW-nD-RLy"/>
                             <constraint firstItem="5A9-FA-QF5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="M4E-lY-gPv"/>
@@ -294,6 +294,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rej-cY-dVC" secondAttribute="trailing" constant="44" id="fWS-cl-u5Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Sg-OQ-FiO" secondAttribute="trailing" constant="20" id="h1H-gt-Bhk"/>
                             <constraint firstItem="Rej-cY-dVC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="jDn-Vp-tLH"/>
+                            <constraint firstItem="nlf-6i-nO9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p6R-n4-vpo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nlf-6i-nO9" secondAttribute="trailing" constant="20" id="qwD-i8-Ra0"/>
                             <constraint firstItem="9TY-Ei-dR7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="skF-2v-EOf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5A9-FA-QF5" secondAttribute="bottom" constant="62.333333333333371" id="t9M-vl-fsu"/>
                             <constraint firstItem="bmo-d1-aEU" firstAttribute="trailing" secondItem="Rej-cY-dVC" secondAttribute="trailing" id="uzv-OY-0C3"/>
