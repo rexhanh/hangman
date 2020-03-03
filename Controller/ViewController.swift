@@ -19,6 +19,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var timeGuessedLabel: UILabel!
     @IBOutlet weak var hangmanImage: UIImageView!
     
+    @IBOutlet weak var restartButton: UIButton!
     // MARK: - Class Props/Vars
     
     // MARK: - IBActions
@@ -89,6 +90,9 @@ class HangmanViewController: UIViewController {
         
     }
     
+    @IBAction func restartPressed(_ sender: Any) {
+        reset()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -131,7 +135,11 @@ class HangmanViewController: UIViewController {
         self.hangmanImage.image = UIImage(named: imageName)
     }
     
-     private func reset() -> Void { return }
+     private func reset() -> Void {
+        self.hangman = Hangman(2)
+        viewDidLoad()
+        
+    }
      
      private func playTurn() -> Void {
          updateLabels()

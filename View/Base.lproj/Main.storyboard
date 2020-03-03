@@ -274,6 +274,9 @@
                                 <rect key="frame" x="346" y="44" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTg-gy-fwe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -301,6 +304,7 @@
                     <connections>
                         <outlet property="displayLabel" destination="7Sg-OQ-FiO" id="QGx-QO-ggF"/>
                         <outlet property="hangmanImage" destination="9TY-Ei-dR7" id="o4o-GD-lXm"/>
+                        <outlet property="restartButton" destination="nlf-6i-nO9" id="qhD-Y4-PKA"/>
                         <outlet property="timeGuessedLabel" destination="bmo-d1-aEU" id="miO-Kw-OYa"/>
                         <outlet property="wordLabel" destination="Rej-cY-dVC" id="IRd-fP-Cit"/>
                         <segue destination="gmY-bv-Ggn" kind="show" identifier="toEndGameSegue" id="i0U-ZK-EV4"/>
