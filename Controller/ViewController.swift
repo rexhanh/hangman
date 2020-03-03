@@ -113,7 +113,7 @@ class HangmanViewController: UIViewController {
     private func firstLoadPhrase() {
 //        wordLabel.text = hangman.wordLabelText
         displayLabel.textColor = .white
-        displayLabel.font = displayLabel.font.withSize(30.0)
+        displayLabel.font = displayLabel.font.withSize(25.0)
         displayLabel.attributedText = NSAttributedString(string: hangman.displayLabelText, attributes: [NSAttributedString.Key.kern: 5.0])
     }
 
@@ -163,6 +163,7 @@ class HangmanViewController: UIViewController {
             if let destination = segue.destination as? EndGameViewController {
                 if identifier == "toEndGameSegue" {
                     destination.hangman = self.hangman
+                    destination.unitQuote = "\"\(hangman.wordLabelText)\""
                     if self.hangman.checkLoseStatus() {
                         destination.endGameString = "Bronze leage hero?!\n\(String(repeating: "🧂", count: self.hangman.timeGuessedWrong))"
                     }
