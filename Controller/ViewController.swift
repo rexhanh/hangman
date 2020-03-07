@@ -11,7 +11,7 @@ import UIKit
 class HangmanViewController: UIViewController {
 
     // MARK: - Instances: Models
-    var hangman = Hangman(2)
+    var hangman = Hangman()
     
     // MARK: - IBOutlets
     @IBOutlet weak var displayLabel: UILabel!
@@ -141,7 +141,7 @@ class HangmanViewController: UIViewController {
     }
     
      private func reset() -> Void {
-        self.hangman = Hangman(2)
+        self.hangman = Hangman()
         viewDidLoad()
     }
      
@@ -165,10 +165,12 @@ class HangmanViewController: UIViewController {
                     destination.hangman = self.hangman
                     destination.unitQuote = "\"\(hangman.wordLabelText)\""
                     if self.hangman.checkLoseStatus() {
-                        destination.endGameString = "Bronze leage hero?!\n\(String(repeating: "🧂", count: self.hangman.timeGuessedWrong))"
+                        destination.endGameString = "Hello Bronze league hero!\n\(String(repeating: "🧂", count: self.hangman.timeGuessedWrong))"
+                        destination.endGameImage = UIImage(named: "lose")
                     }
                     if self.hangman.checkWinStatus() {
-                        destination.endGameString = "Are you a Grand Master player?!\nYou only guessed wrong \(self.hangman.timeGuessedWrong) time(s)!"
+                        destination.endGameString = "Hello Grand Master player!\nYou only guessed wrong \(self.hangman.timeGuessedWrong) time(s)!\n\(String(repeating: "🧀", count: self.hangman.timeGuessedWrong))"
+                        destination.endGameImage = UIImage(named: "win")
                     }
                 }
             }

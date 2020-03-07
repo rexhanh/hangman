@@ -13,16 +13,19 @@ class EndGameViewController: UIViewController {
     // MARK: IBOutlet
     @IBOutlet weak var endGameLabel: UILabel!
     @IBOutlet weak var unitQuoteLabel: UILabel!
+    @IBOutlet weak var engGameImageView: UIImageView!
     // MARK: Class var
-    var hangman = Hangman(2)
+    var hangman = Hangman()
     var endGameString = ""
     var unitQuote = ""
+    var endGameImage: UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         endGameLabel.text = endGameString
         unitQuoteLabel.text = unitQuote
         // Do any additional setup after loading the view.
         self.hangman.playsound()
+        self.engGameImageView.image = endGameImage
     }
     
     

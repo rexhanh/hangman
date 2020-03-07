@@ -369,31 +369,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-6F-O4e">
-                                <rect key="frame" x="20" y="199" width="374" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6N-Yo-yms">
+                                <rect key="frame" x="80" y="259" width="254" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I6N-Yo-yms" secondAttribute="height" multiplier="1:1" id="G0t-oi-yA1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOc-UU-Fwj">
+                                <rect key="frame" x="133" y="601" width="148" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="iPP-XG-I3p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOc-UU-Fwj">
-                                <rect key="frame" x="99" y="411" width="216" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-6F-O4e">
+                                <rect key="frame" x="20" y="20" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="9q8-6F-O4e" firstAttribute="top" secondItem="cNr-y9-ZF4" secondAttribute="top" constant="199" id="3cK-Sz-g8I"/>
+                            <constraint firstItem="9q8-6F-O4e" firstAttribute="top" secondItem="cNr-y9-ZF4" secondAttribute="top" constant="20" id="3cK-Sz-g8I"/>
                             <constraint firstItem="9q8-6F-O4e" firstAttribute="centerX" secondItem="eO6-8F-XKy" secondAttribute="centerX" id="3zs-2C-742"/>
+                            <constraint firstItem="I6N-Yo-yms" firstAttribute="leading" secondItem="cNr-y9-ZF4" secondAttribute="leading" constant="80" id="Fko-pw-qEh"/>
+                            <constraint firstItem="OOc-UU-Fwj" firstAttribute="centerX" secondItem="cNr-y9-ZF4" secondAttribute="centerX" id="MnP-a3-3qV"/>
+                            <constraint firstItem="cNr-y9-ZF4" firstAttribute="bottom" secondItem="I6N-Yo-yms" secondAttribute="bottom" constant="295" id="RYm-xr-Xcm"/>
+                            <constraint firstItem="cNr-y9-ZF4" firstAttribute="trailing" secondItem="I6N-Yo-yms" secondAttribute="trailing" constant="80" id="flB-Rg-J5B"/>
                             <constraint firstItem="9q8-6F-O4e" firstAttribute="leading" secondItem="cNr-y9-ZF4" secondAttribute="leading" constant="20" id="gIT-6e-KLS"/>
+                            <constraint firstItem="I6N-Yo-yms" firstAttribute="top" secondItem="OOc-UU-Fwj" secondAttribute="bottom" constant="-387" id="gh6-PA-Tsc"/>
+                            <constraint firstItem="I6N-Yo-yms" firstAttribute="centerX" secondItem="cNr-y9-ZF4" secondAttribute="centerX" id="xKx-KJ-Q2t"/>
+                            <constraint firstItem="OOc-UU-Fwj" firstAttribute="leading" secondItem="cNr-y9-ZF4" secondAttribute="leading" constant="133" id="xMO-bI-rhq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cNr-y9-ZF4"/>
                     </view>
                     <navigationItem key="navigationItem" id="R5M-cs-eG4"/>
                     <connections>
                         <outlet property="endGameLabel" destination="9q8-6F-O4e" id="gdN-0S-Pee"/>
+                        <outlet property="engGameImageView" destination="I6N-Yo-yms" id="12f-EM-zZo"/>
                         <outlet property="unitQuoteLabel" destination="OOc-UU-Fwj" id="RsP-Mt-fBr"/>
                     </connections>
                 </viewController>

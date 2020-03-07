@@ -19,64 +19,18 @@ class Hangman {
     var lastGuessed = ""
     var correctGuess = 0
     var wordDic: [String:String] = [:]
-    var wwdcArray:[String] = [
-        "Good morning",
-        "We have developers here",
-        "June Fourth",
-        "World Wide Developers Conference",
-        "San Jose Convention Center",
-        "App Store turns ten",
-        "This is mind blowing",
-        "This is beyond remarkable",
-        "the power of code",
-        "Everyone Can Code",
-        "changing the world",
-        "Today is all about software",
-        "Craig Federighi",
-        "Hair Force One",
-        "tens of millions of students",
-        "Swift on the App Store",
-        "fastest growing programming language",
-        "Swift Playgrounds",
-        "group of creators",
-        "The App Store",
-        "Your creativity and hard work",
-        "Tim Cook",
-        "Split View",
-        "Drag and Drop",
-        "Slide Over",
-        "ARKit",
-        "Find My",
-        "iMessage",
-        "Airpods Pro",
-        "Voice Memos",
-        "Apple News",
-        "Do Not Disturb",
-        "Apple Park",
-        "Apple Watch Series",
-        "Siri Shortcuts",
-        "macOS Mojave",
-        "macOS Catalina",
-        "macOS High Sierra",
-        "AMD Vega Pro",
-        "Macbook Pro",
-        "Core ML",
-        "iMac Pro"
-    ]
+    var wwdcArray:[String]!
     
-    init(_ debugmode: Int) {
-        if debugmode == 1{
-            self.wwdcArray = ["Zealot"]
-        } else {
-            if let URL = Bundle.main.url(forResource: "wordlist", withExtension: "plist") {
-                if let englishFromPlist = NSDictionary(contentsOf: URL) as? [String:String] {
-                    self.wordDic = englishFromPlist
-                }}
-            self.wwdcArray = Array(self.wordDic.keys.map{$0})
+    init() {
+    if let URL = Bundle.main.url(forResource: "wordlist", withExtension: "plist") {
+            if let englishFromPlist = NSDictionary(contentsOf: URL) as? [String:String] {
+                self.wordDic = englishFromPlist
+                }
         }
-            let randPhrase = randomPhrase()
-            self.wordLabelText = randPhrase[0]
-            self.displayLabelText = randPhrase[1]
+        self.wwdcArray = Array(self.wordDic.keys.map{$0})
+        let randPhrase = randomPhrase()
+        self.wordLabelText = randPhrase[0]
+        self.displayLabelText = randPhrase[1]
         
     }
     // MARK: - Your Code Here
